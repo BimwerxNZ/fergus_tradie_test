@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1800px) {
+    .container {
+      max-width: 1500px;
+    }
+  }
+
+  /*the container must be positioned relative:*/
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 200;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+
+
+  .responsive {
+    width: 20%;
+    height: auto;
+  }
+
+  #videoal {
+    /* ... put any margin, padding, etc. here you like */
+  }
+
+  #videoal div.video {
+    display: inline-block;
+    *display: inline;
+    width: 427;
+    height: 240;
+    margin: 0 10px 10px 0;
+  }
+
+  #myInput {
+    background-image: url('/img/search-icon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+
+  #crosshair-h {
+    width: 100%;
+    height: 1px;
+    margin-top: 0px;
+  }
+
+  #crosshair-v {
+    height: 100%;
+    width: 1px;
+    margin-left: 0px;
+  }
+
+  .hair {
+    position: fixed;
+    background-color: #444444;
+    box-shadow: 0 0 0px rgb(100, 100, 100);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .tab {
+    display: inline-block;
+    width: 300px;
+  }
+
+  .tab2 {
+    display: inline-block;
+    width: 300px;
+  }
+
+
+#loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+}​
+
+
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    margin-bottom: 60px;
+    /* Margin bottom by footer height */
+  }
+  
+
+  
+  #snackbar_favs {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #5cff9a;
+    color: #005721;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+
+  #snackbar_favs.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+
+
+  #snackbar_error {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #ff5f5f;
+    color: #850000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+
+  #snackbar_error.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+
+
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+
+
+  .btn-lg {
+    padding: 6% 0;
+    /* define values in pixels / Percentage or em. whatever suits 
+     your requirements */
+  }
+
+
+  #opaque {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+  background-color: black;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+* html #opaque {
+  position: absolute;
+}
+
+
+#myInput {
+  background-image: url('../img/search-icon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+canvas {     
+  border: 1px solid black;
+  border-radius: 0px;
+}
+
+th {
+  cursor: pointer;
+}
+
+
+.pcard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: green;
+  font-size: 22px;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
